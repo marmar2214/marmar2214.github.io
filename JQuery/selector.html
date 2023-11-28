@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JQuery Selector</h1>
+    <p class="p-tag">JQuery is Easy.</p>
+    <p class="p-tag">JQuery is funny.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        // selector - element, class, id, attribute, *
+        // $('selector').action(callback)
+        // when the action is done. write what you want to happen in the call function
+        $(document).ready(function(){
+            $('#hide').click(function(){
+                // $('h1').hide(function(){
+                //    alert('Hide');
+                // })
+                // hide(speed, callback)
+                $('h1').hide('slow');
+                $('.p-tag').hide('fast');
+            })
+            
+            $('#show').click(function(){
+                $('h1').show(5000);
+                $('.p-tag').show('slow');
+            })
+
+        })
+
+    </script>
+</body>
+</html>
